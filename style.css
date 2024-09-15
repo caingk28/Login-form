@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+  line-height: 1.4;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left-side {
+  flex: 1;
+  background-image: url('https://source.unsplash.com/random/1200x800?forest,mist');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.app-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  margin-bottom: 1rem;
+}
+
+.left-side-content {
+  margin-top: 2rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.benefits {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.benefits li {
+  margin-bottom: 0.5rem;
+}
+
+.testimonial, .quote {
+  font-style: italic;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.right-side {
+  flex: 1;
+  background-color: #F5DEB3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.leaf-top-right, .leaf-bottom-left {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.7;
+}
+
+.leaf-top-right {
+  top: -20px;
+  right: -20px;
+}
+
+.leaf-bottom-left {
+  bottom: -20px;
+  left: -20px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  z-index: 1;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #228B22;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid #8FBC8F;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.password-strength {
+  height: 3px;
+  margin-top: 3px;
+  background-color: #ddd;
+  transition: all 0.3s ease;
+}
+
+button {
+  background-color: #228B22;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a6b1a;
+}
+
+.social-signup {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.social-btn {
+  margin: 0.25rem;
+  padding: 0.4rem 0.8rem;
+  width: auto;
+  font-size: 0.8rem;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.google {
+  background-color: #db4437;
+}
+
+.login-link {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.login-link a {
+  color: #228B22;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    height: 30vh;
+  }
+
+  .right-side {
+    height: 70vh;
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+
+  .left-side-content {
+    margin-top: 1rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .benefits, .testimonial, .quote {
+    font-size: 0.8rem;
+  }
+
+  .form-container {
+    padding: 1rem;
+    max-height: 65vh;
+  }
+}
